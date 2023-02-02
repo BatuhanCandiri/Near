@@ -1,0 +1,33 @@
+public class BuyukKucukDeger {
+
+    public static void main(String[] args) {
+
+    int[] list = {7,5,8,-980,7,8,28552,1,7854,12};
+
+    int min = list[0];
+    int max = list[0];
+    int minNear = list[0];
+    int maxNear = list[0];
+
+    for (int i: list){
+        if (i<min){
+            min = i;
+        } else if (i>max) {
+            max = i;
+        }
+        if (i>min && i<minNear){
+            minNear=i;
+        } else if (i<max && i>maxNear) {
+            maxNear=i;
+        }
+    }
+        System.out.println();
+        System.out.println("================================");
+        System.out.println("Minumum Değer : "+min);
+        System.out.println("Maximum Değer : "+max);
+        System.out.println("En Yakın Minumum Değer : "+minNear);
+        System.out.println("En Yakın MAximum Değer : "+maxNear);
+        System.out.println("=================================");
+    }
+
+}
